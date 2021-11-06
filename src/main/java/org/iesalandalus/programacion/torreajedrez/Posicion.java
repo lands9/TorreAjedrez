@@ -11,6 +11,14 @@ public class Posicion {
 		setFila(fila);
 		setColumna(columna);
 	}
+	
+	public Posicion(Posicion posicion) {
+		if(posicion == null) {
+			throw new NullPointerException("No se puede copiar una posición nula");
+		}
+		this.fila=posicion.getFila();
+		this.columna=posicion.getColumna();
+	}
 	public int getFila() {
 		return fila;
 	}
