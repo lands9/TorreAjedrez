@@ -4,6 +4,13 @@ public class Posicion {
 	private int fila;
 	private char columna;
 	
+	
+	
+	
+	public Posicion(int fila, char columna) {
+		setFila(fila);
+		setColumna(columna);
+	}
 	public int getFila() {
 		return fila;
 	}
