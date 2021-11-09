@@ -8,7 +8,16 @@ public class Torre {
 		posicion = new Posicion(8,'h');
 		setColor(Color.NEGRO);
 	}
-
+	public Torre (Color color) {
+		if (color.equals(Color.NEGRO)) {
+		posicion = new Posicion(8,'h');
+		setColor(Color.NEGRO);
+		}
+		if (color.equals(Color.BLANCO)) {
+		posicion = new Posicion(1,'h');
+		setColor(Color.BLANCO);
+		}
+	}
 	public Color getColor() {
 		return color;
 	}
