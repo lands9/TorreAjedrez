@@ -4,6 +4,11 @@ public class Torre {
 	private Color color;
 	private Posicion posicion;
 	
+	public Torre() {
+		posicion = new Posicion(8,'h');
+		setColor(Color.NEGRO);
+	}
+
 	public Color getColor() {
 		return color;
 	}
@@ -11,7 +16,7 @@ public class Torre {
 		if (color == null || color.equals("")) {
 			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
 		}
-		if(!color.equals("BLANCO")  || !color.equals("NEGRO")) {
+		if(!color.equals(Color.BLANCO)  && !color.equals(Color.NEGRO)) {
 			throw new IllegalArgumentException("El color no es el esperado.");
 		}
 		this.color = color;
