@@ -9,6 +9,9 @@ public class Torre {
 		setColor(Color.NEGRO);
 	}
 	public Torre (Color color) {
+		if(color == null) {
+			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
+		}
 		if (color.equals(Color.NEGRO)) {
 		posicion = new Posicion(8,'h');
 		setColor(Color.NEGRO);
@@ -16,6 +19,23 @@ public class Torre {
 		if (color.equals(Color.BLANCO)) {
 		posicion = new Posicion(1,'h');
 		setColor(Color.BLANCO);
+		}
+	}
+	public Torre (Color color, char columna) {
+		
+		if(color == null) {
+			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
+		}
+		
+		if (color.equals(Color.NEGRO)){
+			posicion = new Posicion(8, columna);
+			setColor(Color.NEGRO);
+			
+		}
+		if (color.equals(Color.BLANCO)) {
+			posicion = new Posicion(1, columna);
+			setColor(Color.BLANCO);
+			
 		}
 	}
 	public Color getColor() {
