@@ -41,5 +41,32 @@ private static Torre torre;
 		return opcion;
 		
 	}
+	private static Color elegirColor() {
+		Color color = null;
+		
+		int opcionesColor=0;
+		
+		do {
+			System.out.println("===============");
+			System.out.println("1. Negras");
+			System.out.println("2. Blancas");
+			System.out.println("================");
+			System.out.println("Elige un color:");
+			opcionesColor=Entrada.entero();
+		}while(opcionesColor<1 || opcionesColor>2);
+		
+		switch (opcionesColor){
+		case 1:
+			color=Color.NEGRO;
+			break;
+		case 2:
+			color=Color.BLANCO;
+			break;
+		}
+		return color;
+		
+	}
+	
+	
 
 }
