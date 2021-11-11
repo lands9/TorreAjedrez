@@ -133,4 +133,8 @@ private static Torre torre;
 		torre = new Torre();
 		
 	}
+	private static void crearTorreColor() {
+		torre= new Torre(elegirColor());
+	}
+	
 }
