@@ -81,4 +81,16 @@ private static Torre torre;
 		return columna;
 	}
 
+	private static void mostrarMenuDirecciones() {
+		System.out.println("==========================");
+		System.out.println("Elige entre las siguientes direcciones a realizar:");
+		System.out.println("1. Mover hacia delante");
+		System.out.println("2. Mover hacia atras");
+		System.out.println("3. Mover hacia la izquierda");
+		System.out.println("4. Mover hacia la derecha");
+		System.out.println("5.Enroque largo");
+		System.out.println("Enroque corto");
+		System.out.println("====================");
+		
+	}
 }
