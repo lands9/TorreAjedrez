@@ -89,8 +89,43 @@ private static Torre torre;
 		System.out.println("3. Mover hacia la izquierda");
 		System.out.println("4. Mover hacia la derecha");
 		System.out.println("5.Enroque largo");
-		System.out.println("Enroque corto");
+		System.out.println("6. Enroque corto");
 		System.out.println("====================");
+		
+	}
+	
+	private static Direccion elegirDireccion() {
+		Direccion direccion = null;
+		int elegirMovimiento=0;
+		
+		do {
+			System.out.println("==============================");
+			System.out.println("Elige una opcion de las anteriores:");
+			System.out.println("==================================");
+			elegirMovimiento=Entrada.entero();
+		}while(elegirMovimiento<1 || elegirMovimiento>6);
+		
+		switch(elegirMovimiento) {
+		case 1:
+			direccion=Direccion.ARRIBA;
+			break;
+		case 2:
+			direccion=Direccion.ABAJO;
+			break;
+		case 3:
+			direccion=Direccion.IZQUIERDA;
+			break;
+		case 4:
+			direccion=Direccion.DERECHA;
+			break;
+		case 5:
+			direccion=Direccion.ENROQUE_LARGO;
+			break;
+		case 6:
+			direccion=Direccion.ENROQUE_CORTO;
+			break;
+		}
+		return direccion;
 		
 	}
 }
