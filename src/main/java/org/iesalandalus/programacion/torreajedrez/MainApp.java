@@ -67,6 +67,18 @@ private static Torre torre;
 		
 	}
 	
-	
+	private static char elegirColumnaInicial() {
+		char columna;
+		do {
+			
+		System.out.println("==============================");
+		System.out.println("Elige la columna inicial con la cual quieres empezar");
+		System.out.println("elige entre la columna 'a' o 'h':");
+		System.out.println("===============================");
+		 columna= Character.toLowerCase(Entrada.caracter());
+		}while(columna!='a' || columna!='h');
+
+		return columna;
+	}
 
 }
