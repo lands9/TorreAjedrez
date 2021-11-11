@@ -136,5 +136,8 @@ private static Torre torre;
 	private static void crearTorreColor() {
 		torre= new Torre(elegirColor());
 	}
+	private static void crearTorreColorColumna() {
+		torre = new Torre(elegirColor(), elegirColumnaInicial());
+	}
 	
 }
