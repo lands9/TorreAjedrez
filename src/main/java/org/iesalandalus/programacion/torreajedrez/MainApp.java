@@ -7,7 +7,15 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 public class MainApp {
 private static Torre torre;
 	public static void main(String[] args) {
-		
+		int opcionElegir;
+		do {
+			mostrarMenu();
+			opcionElegir=elegirOpcion();
+			ejecutarOpcion(opcionElegir);
+			System.out.println("===========Esta es tu torre================");
+			mostrarTorre();
+			
+		}while(opcionElegir!=5);
 		
 		
 		
@@ -78,7 +86,7 @@ private static Torre torre;
 		System.out.println("elige entre la columna 'a' o 'h':");
 		System.out.println("===============================");
 		 columna= Character.toLowerCase(Entrada.caracter());
-		}while(columna!='a' || columna!='h');
+		}while(columna!='a' && columna!='h');
 
 		return columna;
 	}
@@ -144,11 +152,8 @@ private static Torre torre;
 	private static void mover() {
 		Direccion direccion = null;
 		int pasos;
-		if (torre == null) {
-			System.out.println("Debes elegir antes una torre.");
-		}else {
-			mostrarMenuDirecciones();
-			direccion=elegirDireccion();
+		mostrarMenuDirecciones();
+		direccion=elegirDireccion();
 			if(direccion.equals(Direccion.ENROQUE_CORTO) || direccion.equals(Direccion.ENROQUE_LARGO)) {
 				try {
 					torre.enrocar(direccion);
@@ -165,7 +170,6 @@ private static Torre torre;
 					System.out.println(e.getMessage());
 				}
 			}
-		}
 	}
 	private static void ejecutarOpcion(int opcion) {
 		switch (opcion) {
@@ -177,6 +181,7 @@ private static Torre torre;
 			break;
 		case 3:
 			crearTorreColorColumna();
+			break;
 		case 4:
 			mover();
 			break;
