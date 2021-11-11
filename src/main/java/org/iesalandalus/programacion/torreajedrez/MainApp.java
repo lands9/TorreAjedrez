@@ -128,4 +128,9 @@ private static Torre torre;
 		return direccion;
 		
 	}
+	
+	private static void crearTorreDefecto() {
+		torre = new Torre();
+		
+	}
 }
