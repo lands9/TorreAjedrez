@@ -167,4 +167,23 @@ private static Torre torre;
 			}
 		}
 	}
+	private static void ejecutarOpcion(int opcion) {
+		switch (opcion) {
+		case 1:
+			crearTorreDefecto();
+			break;
+		case 2:
+			crearTorreColor();
+			break;
+		case 3:
+			crearTorreColorColumna();
+		case 4:
+			mover();
+			break;
+		case 5:
+			System.out.println("Hasta la próxima!");
+			 System.exit(0);
+			break;
+		}
+	}
 }
