@@ -7,7 +7,7 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 public class MainApp {
 private static Torre torre;
 	public static void main(String[] args) {
-		int opcionElegir;
+		int opcionElegir=0;
 		do {
 			mostrarMenu();
 			opcionElegir=elegirOpcion();
@@ -152,6 +152,14 @@ private static Torre torre;
 	private static void mover() {
 		Direccion direccion = null;
 		int pasos;
+		if (torre == null) {
+			try {
+				System.out.println(torre.toString());
+				
+			}catch(NullPointerException e){
+				System.out.println("ERROR: La torre aún no está creada.");
+			}
+		}else {
 		mostrarMenuDirecciones();
 		direccion=elegirDireccion();
 			if(direccion.equals(Direccion.ENROQUE_CORTO) || direccion.equals(Direccion.ENROQUE_LARGO)) {
@@ -170,6 +178,7 @@ private static Torre torre;
 					System.out.println(e.getMessage());
 				}
 			}
+		}
 	}
 	private static void ejecutarOpcion(int opcion) {
 		switch (opcion) {

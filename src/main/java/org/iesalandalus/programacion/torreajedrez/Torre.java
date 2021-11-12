@@ -52,7 +52,7 @@ public class Torre {
 		if ( pasos <= 0) {
 			throw new IllegalArgumentException("ERROR: El número de pasos debe ser positivo.");
 		}
-
+		
 		switch (direccion) {
 		
 		case ARRIBA:
