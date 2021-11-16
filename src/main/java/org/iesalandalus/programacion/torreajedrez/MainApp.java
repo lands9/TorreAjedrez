@@ -149,7 +149,7 @@ private static Torre torre;
 	private static void crearTorreColorColumna() {
 		torre = new Torre(elegirColor(), elegirColumnaInicial());
 	}
-	private static void mover() throws IllegalArgumentException, NullPointerException{
+	private static void mover(){
 		Direccion direccion = null;
 		int pasos;
 		if (torre == null) {
