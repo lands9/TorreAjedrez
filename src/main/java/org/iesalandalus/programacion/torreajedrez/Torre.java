@@ -175,7 +175,7 @@ public class Torre {
 		this.color = color;
 	}
 	public Posicion getPosicion() {
-		return posicion;
+		return new Posicion(posicion);
 	}
 	private void setPosicion(Posicion posicion) {
 		if(posicion == null) {

@@ -149,7 +149,7 @@ private static Torre torre;
 	private static void crearTorreColorColumna() {
 		torre = new Torre(elegirColor(), elegirColumnaInicial());
 	}
-	private static void mover() {
+	private static void mover() throws IllegalArgumentException, NullPointerException{
 		Direccion direccion = null;
 		int pasos;
 		if (torre == null) {
@@ -174,9 +174,10 @@ private static Torre torre;
 				pasos=Entrada.entero();
 				try {
 					torre.mover(direccion, pasos);
-				}catch(OperationNotSupportedException e) {
+				}catch(IllegalArgumentException | NullPointerException | OperationNotSupportedException e) {
 					System.out.println(e.getMessage());
 				}
+				
 			}
 		}
 	}
